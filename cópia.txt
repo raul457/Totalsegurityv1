@@ -1,0 +1,220 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Total Security — Segurança Eletrônica</title>
+  <meta name="description" content="Total Security: soluções em segurança eletrônica. Câmeras, alarmes, cercas elétricas e controle de acesso. Solicite um orçamento pelo WhatsApp." />
+  <link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'%3E%3Ccircle cx='50' cy='50' r='48' fill='%230a0a0a'/%3E%3Ctext x='50' y='60' font-size='52' text-anchor='middle' fill='white' font-family='Arial,Helvetica,sans-serif'%3ETS%3C/text%3E%3C/svg%3E" />
+  <script src="https://cdn.tailwindcss.com"></script>
+  <!-- meta[name="theme-color"] removed for browsers that don't support it (Firefox, Opera) -->
+  <style>html { scroll-behavior: smooth; }</style>
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "Organization",
+    "name": "Total Security",
+    "url": "https://totalsecurity.com.br",
+    "logo": "https://totalsecurity.com.br/logo.png",
+    "sameAs": [
+      "https://www.facebook.com/TotalSecurity",
+      "https://www.instagram.com/TotalSecurity"
+    ],
+    "contactPoint": {
+      "@type": "ContactPoint",
+      "telephone": "+55-44-99156-1510",
+      "contactType": "customer support",
+      "areaServed": "BR",
+      "availableLanguage": ["Portuguese", "English"]
+    }
+  }
+  </script>
+</head>
+<body class="bg-neutral-50 text-neutral-900">
+
+  <!-- Header -->
+  <header class="sticky top-0 z-50 bg-white/90 backdrop-blur border-b border-neutral-200">
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 h-16 flex items-center justify-between">
+      <a href="#" class="flex items-center gap-2 font-semibold">
+        <span class="inline-flex items-center justify-center w-9 h-9 rounded-2xl bg-sky-600 text-white">TS</span>
+        <span class="tracking-tight">Total Security</span>
+      </a>
+      <nav class="hidden md:flex items-center gap-6 text-sm">
+        <a href="#produtos" class="hover:text-sky-700">Produtos</a>
+        <a href="#contato" class="hover:text-sky-700">Contato</a>
+        <a href="#sobre" class="hover:text-sky-700">Sobre</a>
+      </nav>
+      <div class="hidden md:flex items-center gap-3">
+        <a href="https://wa.me/5544991561510?text=Ol%C3%A1%2C%20gostaria%20de%20um%20or%C3%A7amento%20%F0%9F%91%8B" target="_blank" rel="noopener" class="inline-flex items-center gap-2 rounded-2xl border border-sky-600 px-4 py-2 text-sm font-medium text-sky-700 hover:bg-sky-50">
+          <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="currentColor" class="w-4 h-4"><path d="M20.52 3.48A11.86 11.86 0 0 0 12 0C5.37 0 0 5.37 0 12c0 2.11.55 4.15 1.61 5.96L0 24l6.2-1.62A11.9 11.9 0 0 0 12 24c6.63 0 12-5.37 12-12 0-3.2-1.25-6.21-3.48-8.52Z"/></svg>
+          WhatsApp
+        </a>
+      </div>
+
+      <!-- Botão Mobile -->
+      <button id="btnMenu" title="Abrir menu" aria-label="Abrir menu" class="md:hidden inline-flex items-center justify-center w-10 h-10 rounded-lg hover:bg-neutral-100">
+        <svg xmlns="http://www.w3.org/2000/svg" class="h-6 w-6" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+          <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h16M4 18h16" />
+        </svg>
+      </button>
+    </div>
+
+    <!-- Menu Mobile -->
+    <div id="mobileNav" class="md:hidden hidden border-t border-neutral-200 bg-white">
+      <nav class="max-w-7xl mx-auto px-4 py-3 flex flex-col gap-3 text-sm">
+        <a href="#produtos" class="py-2">Produtos</a>
+        <a href="#contato" class="py-2">Contato</a>
+        <a href="#sobre" class="py-2">Sobre</a>
+      </nav>
+    </div>
+  </header>
+
+  <!-- Hero -->
+  <section class="relative overflow-hidden">
+    <div class="absolute inset-0 bg-gradient-to-br from-sky-50 to-white"></div>
+    <div class="relative max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-16 sm:py-24 grid md:grid-cols-2 gap-10 items-center">
+      <div>
+        <h1 class="text-4xl sm:text-5xl font-extrabold tracking-tight text-neutral-900">
+          Segurança eletrônica de confiança para sua <span class="text-sky-600">casa</span> e <span class="text-sky-600">empresa</span>.
+        </h1>
+        <p class="mt-4 text-neutral-700 max-w-prose">A Total Security oferece câmeras, alarmes, cercas elétricas e controle de acesso com instalação profissional. Fale com um especialista e receba seu orçamento.</p>
+        <div class="mt-6 flex flex-wrap gap-3">
+          <a href="#produtos" class="inline-flex items-center rounded-2xl bg-sky-600 text-white px-5 py-3 font-medium hover:bg-sky-700">Ver produtos</a>
+          <a href="https://wa.me/5544991561510?text=Quero%20um%20or%C3%A7amento" target="_blank" rel="noopener" class="inline-flex items-center rounded-2xl border border-neutral-300 px-5 py-3 font-medium hover:bg-neutral-50">Falar no WhatsApp</a>
+        </div>
+      </div>
+      <div class="relative">
+        <div class="absolute -inset-6 bg-gradient-to-tr from-sky-100 to-transparent rounded-3xl blur-2xl"></div>
+        <img src="https://cdn-icons-png.flaticon.com/512/3065/3065811.png" alt="Câmeras de segurança" class="relative rounded-3xl shadow-2xl border border-neutral-200" loading="lazy" />
+      </div>
+    </div>
+  </section>
+
+  <!-- Produtos -->
+  <section id="produtos" class="py-14 sm:py-20">
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+      <div class="flex flex-col sm:flex-row sm:items-end sm:justify-between gap-6">
+        <div>
+          <h2 class="text-3xl font-bold tracking-tight">Produtos</h2>
+          <p class="text-neutral-600 mt-1">Soluções completas em CFTV, alarmes e controle de acesso.</p>
+        </div>
+        <div class="grid grid-cols-2 sm:grid-cols-4 gap-3 w-full sm:w-auto">
+          <input id="search" type="text" placeholder="Buscar por nome ou tag…" class="col-span-2 w-full rounded-xl border border-neutral-300 px-3 py-2 text-sm focus:outline-none focus:ring-2 focus:ring-sky-500" />
+          <label for="category" class="sr-only">Categoria</label>
+          <select id="category" aria-label="Categoria" class="w-full rounded-xl border border-neutral-300 px-3 py-2 text-sm focus:outline-none focus:ring-2 focus:ring-sky-500">
+            <option value="">Todas</option>
+            <option value="Câmeras">Câmeras</option>
+            <option value="Gravação">Gravação</option>
+            <option value="Alarmes">Alarmes</option>
+            <option value="Cerca">Cerca</option>
+            <option value="Acesso">Acesso</option>
+            <option value="Acessórios">Acessórios</option>
+          </select>
+          <label for="sort" class="sr-only">Ordenar</label>
+          <select id="sort" class="w-full rounded-xl border border-neutral-300 px-3 py-2 text-sm focus:outline-none focus:ring-2 focus:ring-sky-500">
+            <option value="pop">Populares</option>
+            <option value="asc">Preço: menor → maior</option>
+            <option value="desc">Preço: maior → menor</option>
+          </select>
+        </div>
+      </div>
+
+      <div id="grid" class="mt-8 grid gap-6 sm:grid-cols-2 lg:grid-cols-3 xl:grid-cols-4"></div>
+      <div id="emptyState" class="hidden mt-10 rounded-2xl border border-neutral-200 p-10 text-center">
+        <p class="text-neutral-600">Nenhum produto encontrado com os filtros atuais.</p>
+      </div>
+    </div>
+  </section>
+
+  <!-- Contato -->
+  <section id="contato" class="py-14 sm:py-20 bg-white border-t border-neutral-200">
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
+      <h2 class="text-3xl font-bold tracking-tight">Entre em contato</h2>
+      <p class="mt-2 text-neutral-600">Solicite um orçamento ou tire suas dúvidas via WhatsApp.</p>
+      <div class="mt-10 flex justify-center">
+        <a href="https://wa.me/5544991561510?text=Ol%C3%A1%2C%20gostaria%20de%20um%20or%C3%A7amento" target="_blank" rel="noopener" class="inline-flex items-center gap-2 rounded-2xl border border-sky-600 px-5 py-3 text-sm font-medium text-sky-700 hover:bg-sky-50">WhatsApp</a>
+      </div>
+    </div>
+  </section>
+
+  <!-- Sobre -->
+  <section id="sobre" class="py-14 sm:py-20">
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 grid md:grid-cols-2 gap-12 items-center">
+      <div>
+        <h2 class="text-3xl font-bold tracking-tight">Sobre a Total Security</h2>
+        <p class="mt-4 text-neutral-600">Somos especialistas em segurança eletrônica, com anos de experiência instalando câmeras, alarmes e sistemas de controle de acesso. Nosso objetivo é proteger você, sua família e seu patrimônio.</p>
+      </div>
+      <img src="https://cdn-icons-png.flaticon.com/512/3065/3065796.png" alt="Equipe instalando segurança" class="rounded-3xl shadow-xl border border-neutral-200" />
+    </div>
+  </section>
+
+  <!-- Footer -->
+  <footer class="bg-white border-t border-neutral-200 py-10 mt-20">
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 text-center text-sm text-neutral-500">
+      &copy; 2025 Total Security. Todos os direitos reservados.
+    </div>
+  </footer>
+
+  <!-- JS -->
+  <script>
+    const products = [
+      { id: 1, name: 'Câmera Bullet 1080p', category: 'Câmeras', price: 399.90, image: 'https://cdn-icons-png.flaticon.com/512/3065/3065811.png', tags: ['cftv', 'exterior'], popular: true },
+      { id: 2, name: 'Câmera Dome 4MP', category: 'Câmeras', price: 529.00, image: 'https://cdn-icons-png.flaticon.com/512/3065/3065788.png', tags: ['interior'], popular: true },
+      { id: 3, name: 'Câmera PTZ 25x', category: 'Câmeras', price: 2599.00, image: 'https://cdn-icons-png.flaticon.com/512/3065/3065824.png', tags: ['ptz', 'zoom'], popular: false },
+      { id: 4, name: 'DVR 8 Canais H.265+', category: 'Gravação', price: 799.00, image: 'https://cdn-icons-png.flaticon.com/512/3065/3065773.png', tags: ['dvr'], popular: true },
+      { id: 5, name: 'NVR 16 Canais 4K', category: 'Gravação', price: 1899.00, image: 'https://cdn-icons-png.flaticon.com/512/3065/3065779.png', tags: ['nvr'], popular: false },
+      { id: 6, name: 'Central de Alarme', category: 'Alarmes', price: 649.00, image: 'https://cdn-icons-png.flaticon.com/512/3065/3065803.png', tags: ['sirene'], popular: true },
+      { id: 7, name: 'Sensor de Movimento', category: 'Alarmes', price: 129.90, image: 'https://cdn-icons-png.flaticon.com/512/3065/3065805.png', tags: ['sensor'], popular: true },
+      { id: 8, name: 'Cerca Elétrica 50m', category: 'Cerca', price: 799.90, image: 'https://cdn-icons-png.flaticon.com/512/3065/3065781.png', tags: ['cerca'], popular: false },
+      { id: 9, name: 'Concertina 30cm', category: 'Cerca', price: 259.90, image: 'https://cdn-icons-png.flaticon.com/512/3065/3065800.png', tags: ['perímetro'], popular: false },
+      { id: 10, name: 'Interfone IP', category: 'Acesso', price: 1199.00, image: 'https://cdn-icons-png.flaticon.com/512/3065/3065790.png', tags: ['voz'], popular: true },
+      { id: 11, name: 'Fechadura Eletrônica', category: 'Acesso', price: 899.00, image: 'https://cdn-icons-png.flaticon.com/512/3065/3065792.png', tags: ['senha'], popular: false },
+      { id: 12, name: 'Fonte 12V 5A', category: 'Acessórios', price: 79.90, image: 'https://cdn-icons-png.flaticon.com/512/3065/3065816.png', tags: ['fonte'], popular: true }
+    ];
+
+    const grid = document.getElementById('grid');
+    const emptyState = document.getElementById('emptyState');
+    const search = document.getElementById('search');
+    const category = document.getElementById('category');
+    const sort = document.getElementById('sort');
+
+    function renderProducts(list) {
+      grid.innerHTML = list.map(p => `
+        <div class="rounded-2xl border border-neutral-200 bg-white overflow-hidden shadow-sm hover:shadow-lg transition">
+          <img src="${p.image}" alt="${p.name}" class="w-full h-48 object-contain p-4 bg-white" loading="lazy" />
+          <div class="p-4">
+            <h3 class="font-semibold">${p.name}</h3>
+            <p class="mt-1 text-sm text-neutral-600">${p.category}</p>
+            <p class="mt-2 font-bold text-sky-600">R$ ${p.price.toFixed(2)}</p>
+          </div>
+        </div>
+      `).join('');
+      emptyState.classList.toggle('hidden', list.length > 0);
+    }
+
+    function updateProducts() {
+      const term = search.value.toLowerCase();
+      const cat = category.value;
+      const sortVal = sort.value;
+
+      let filtered = products.filter(p =>
+        (!cat || p.category === cat) &&
+        (p.name.toLowerCase().includes(term) || p.tags.some(tag => tag.includes(term)))
+      );
+
+      if (sortVal === 'asc') filtered.sort((a,b)=>a.price-b.price);
+      if (sortVal === 'desc') filtered.sort((a,b)=>b.price-a.price);
+      if (sortVal === 'pop') filtered.sort((a,b)=>b.popular - a.popular);
+
+      renderProducts(filtered);
+    }
+
+    [search, category, sort].forEach(el => el.addEventListener('input', updateProducts));
+    updateProducts();
+
+    const btnMenu = document.getElementById('btnMenu');
+    const mobileNav = document.getElementById('mobileNav');
+    btnMenu.addEventListener('click', () => mobileNav.classList.toggle('hidden'));
+  </script>
+</body>
+</html>

@@ -1,0 +1,177 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+<meta charset="UTF-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+<title>Solicite seu Orçamento - Total Security</title>
+<script src="https://cdn.tailwindcss.com"></script>
+</head>
+<body class="bg-black text-white">
+
+<header class="sticky top-0 z-50 bg-black/95 border-b border-neutral-800 backdrop-blur">
+  <div class="max-w-7xl mx-auto px-6 lg:px-8 h-20 flex items-center justify-between">
+
+    <a href="index.html" class="flex items-center gap-4">
+      <span class="inline-flex items-center justify-center w-14 h-14 rounded-2xl bg-emerald-600 text-black text-2xl font-extrabold">TS</span>
+      <span class="text-3xl font-extrabold tracking-tight text-white">Total Security</span>
+    </a>
+
+    <nav class="hidden md:flex items-center gap-8 text-base">
+      <a href="index.html#produtos" class="hover:text-emerald-400">Produtos</a>
+      <a href="index.html#contato" class="hover:text-emerald-400">Contato</a>
+      <a href="index.html#sobre" class="hover:text-emerald-400">Sobre</a>
+
+      <a href="https://wa.me/5544991561510?text=Ol%C3%A1%2C%20quero%20um%20or%C3%A7amento"
+         target="_blank"
+         class="inline-flex items-center gap-2 rounded-full border border-emerald-600 px-4 py-2 text-base font-medium text-emerald-400 hover:bg-neutral-900">
+        <svg xmlns="http://www.w3.org/2000/svg" class="w-4 h-4" fill="none"
+             viewBox="0 0 24 24" stroke="currentColor" stroke-width="1.5">
+          <path stroke-linecap="round" stroke-linejoin="round"
+                d="M3 5h4l2 5-2 2 4 4 2-2 5 2v4a1 1 0 01-1 1 16 16 0 01-16-16 1 1 0 011-1z"/>
+        </svg>
+        WhatsApp
+      </a>
+    </nav>
+
+    <button id="btnMenuMobile" class="md:hidden inline-flex items-center justify-center w-10 h-10 rounded-lg hover:bg-neutral-900">
+      <svg xmlns="http://www.w3.org/2000/svg" class="h-6 w-6" fill="none"
+           viewBox="0 0 24 24" stroke="currentColor" stroke-width="2">
+        <path stroke-linecap="round" stroke-linejoin="round"
+              d="M4 6h16M4 12h16M4 18h16" />
+      </svg>
+    </button>
+  </div>
+</header>
+
+<!-- Menu mobile -->
+<div id="mobileNav" class="md:hidden hidden border-t border-neutral-800 bg-black/95">
+  <nav class="flex flex-col px-6 py-4 gap-4 text-base">
+    <a href="index.html#produtos" class="hover:text-emerald-400">Produtos</a>
+    <a href="index.html#contato" class="hover:text-emerald-400">Contato</a>
+    <a href="index.html#sobre" class="hover:text-emerald-400">Sobre</a>
+    <a href="https://wa.me/5544991561510?text=Ol%C3%A1%2C%20quero%20um%20or%C3%A7amento"
+       target="_blank" class="text-emerald-400 font-medium">WhatsApp</a>
+  </nav>
+</div>
+
+<section id="orcamento" class="w-full py-20 bg-black bg-opacity-95">
+  <h2 class="text-4xl font-bold text-center text-emerald-400 mb-10 tracking-wide">
+    SOLICITE SEU ORÇAMENTO
+  </h2>
+
+  <div class="max-w-4xl mx-auto bg-neutral-900 p-10 rounded-2xl shadow-lg border border-neutral-700">
+    <form id="formOrcamento" class="grid grid-cols-1 gap-6">
+
+      <div class="grid grid-cols-1 md:grid-cols-2 gap-6">
+        <select name="estado" class="p-3 rounded-xl bg-neutral-800 text-white border border-neutral-700">
+          <option value="Paraná">Paraná</option>
+        </select>
+        <input type="text" name="cidade" placeholder="Cidade" class="p-3 rounded-xl bg-neutral-800 text-white border border-neutral-700" />
+      </div>
+
+      <div class="grid grid-cols-1 md:grid-cols-2 gap-6">
+        <input type="text" name="nome" placeholder="Nome *" required class="p-3 rounded-xl bg-neutral-800 text-white border border-neutral-700" />
+        <input type="email" name="email" placeholder="E-mail" class="p-3 rounded-xl bg-neutral-800 text-white border border-neutral-700" />
+      </div>
+
+      <input type="tel" name="telefone" placeholder="Telefone * (ex: 44991561510)" required class="p-3 rounded-xl bg-neutral-800 text-white border border-neutral-700" />
+
+      <div class="grid grid-cols-1 md:grid-cols-2 gap-10 mt-4">
+        <div>
+          <h3 class="font-semibold mb-3 text-emerald-400">Natureza da Operação</h3>
+          <label class="block mb-1"><input type="radio" name="nat" value="Comércio" class="mr-2" /> Comércio</label>
+          <label class="block mb-1"><input type="radio" name="nat" value="Residência" class="mr-2" /> Residência</label>
+          <label class="block mb-1"><input type="radio" name="nat" value="Condomínio" class="mr-2" /> Condomínio</label>
+          <label class="block mb-1"><input type="radio" name="nat" value="Indústria" class="mr-2" /> Indústria</label>
+          <label class="block mb-1"><input type="radio" name="nat" value="Agronegócio" class="mr-2" /> Agronegócio</label>
+          <label class="block mb-1"><input type="radio" name="nat" value="Outros" class="mr-2" /> Outros</label>
+        </div>
+
+        <div>
+          <h3 class="font-semibold mb-3 text-emerald-400">Escolha o Serviço Desejado</h3>
+          <label class="block mb-1"><input type="checkbox" name="servicos" value="Alarme Eletrônico" class="mr-2" /> Alarme Eletrônico</label>
+          <label class="block mb-1"><input type="checkbox" name="servicos" value="Câmeras de Segurança" class="mr-2" /> Câmeras de Segurança</label>
+          <label class="block mb-1"><input type="checkbox" name="servicos" value="Cerca Elétrica" class="mr-2" /> Cerca Elétrica</label>
+          <label class="block mb-1"><input type="checkbox" name="servicos" value="Monitoramento de Alarme" class="mr-2" /> Monitoramento de Alarme</label>
+          <label class="block mb-1"><input type="checkbox" name="servicos" value="Portaria Remota" class="mr-2" /> Portaria Remota</label>
+        </div>
+      </div>
+
+      <!-- Mensagem de feedback -->
+      <div id="formMsg" class="hidden rounded-xl px-4 py-3 text-sm font-medium"></div>
+
+      <button type="submit" id="btnSubmit" class="inline-flex items-center justify-center rounded-2xl bg-emerald-600 text-white px-5 py-3 font-medium hover:bg-emerald-500 transition disabled:opacity-60 disabled:cursor-not-allowed">
+        Solicitar orçamento
+      </button>
+    </form>
+  </div>
+</section>
+
+<script>
+// Mobile menu
+(function () {
+  const btn = document.getElementById('btnMenuMobile');
+  const nav = document.getElementById('mobileNav');
+  if (btn && nav) btn.addEventListener('click', () => nav.classList.toggle('hidden'));
+})();
+
+// Formulário de orçamento
+document.getElementById('formOrcamento').addEventListener('submit', async function (e) {
+  e.preventDefault();
+  const form = e.currentTarget;
+  const btn  = document.getElementById('btnSubmit');
+  const msg  = document.getElementById('formMsg');
+
+  // Coleta campos via name attribute
+  const fd = new FormData(form);
+  const estado   = fd.get('estado')   || '';
+  const cidade   = fd.get('cidade')   || '';
+  const nome     = fd.get('nome')     || '';
+  const email    = fd.get('email')    || '';
+  const telefone = fd.get('telefone') || '';
+  const natureza = fd.get('nat')      || '';
+  const servicos = fd.getAll('servicos');
+
+  // Validação básica
+  if (!nome.trim() && !telefone.trim()) {
+    showMsg('Informe pelo menos seu nome ou telefone.', 'error');
+    return;
+  }
+
+  // Loading state
+  btn.disabled    = true;
+  btn.textContent = 'Enviando...';
+  msg.classList.add('hidden');
+
+  try {
+    const res  = await fetch('/submit-orcamento', {
+      method:  'POST',
+      headers: { 'Content-Type': 'application/json' },
+      body:    JSON.stringify({ estado, cidade, nome, email, telefone, natureza, servicos }),
+    });
+    const json = await res.json().catch(() => ({}));
+
+    if (json.ok) {
+      showMsg('Orçamento enviado com sucesso! Em breve entraremos em contato.', 'success');
+      form.reset();
+    } else {
+      showMsg(json.error || 'Houve um problema ao enviar. Tente pelo WhatsApp.', 'error');
+    }
+  } catch (err) {
+    console.error(err);
+    showMsg('Erro de conexão. Tente pelo WhatsApp ou recarregue a página.', 'error');
+  } finally {
+    btn.disabled    = false;
+    btn.textContent = 'Solicitar orçamento';
+  }
+
+  function showMsg(text, type) {
+    msg.textContent = text;
+    msg.className   = type === 'success'
+      ? 'rounded-xl px-4 py-3 text-sm font-medium bg-emerald-900/60 text-emerald-300 border border-emerald-700'
+      : 'rounded-xl px-4 py-3 text-sm font-medium bg-red-900/60 text-red-300 border border-red-700';
+  }
+});
+</script>
+</body>
+</html>

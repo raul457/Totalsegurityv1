@@ -1,0 +1,184 @@
+========================================================
+  COMO HOSPEDAR O SITE NO VERCEL — TOTAL SECURITY
+  (passo a passo completo, do zero)
+========================================================
+
+Você vai precisar de:
+  - Uma conta gratuita no GitHub  (github.com)
+  - Uma conta gratuita no Vercel  (vercel.com)
+  - Uma conta gratuita no Supabase (supabase.com)  ← banco de dados
+
+
+────────────────────────────────────────────────────────
+ PARTE 1 — BANCO DE DADOS (Supabase)
+────────────────────────────────────────────────────────
+
+1. Acesse https://supabase.com e clique em "Start your project"
+2. Crie uma conta (pode usar o Google)
+3. Clique em "New project"
+   - Dê um nome qualquer (ex: totalsecurity)
+   - Crie uma senha forte para o banco (ANOTE essa senha)
+   - Região: South America (São Paulo)
+   - Clique em "Create new project" e aguarde ~1 minuto
+
+4. No menu lateral esquerdo, clique em "SQL Editor"
+5. Clique em "New query"
+6. Copie TODO o conteúdo do arquivo  schema.sql  e cole aqui
+7. Clique em "Run" (ou Ctrl+Enter)
+   ✅ Deve aparecer "Success" — a tabela foi criada!
+
+8. Agora pegue a URL do banco:
+   - Menu lateral → "Settings" → "Database"
+   - Role a página até "Connection string"
+   - Selecione a aba "URI"
+   - Copie o texto que começa com:  postgresql://postgres...
+   - Substitua  [YOUR-PASSWORD]  pela senha que você anotou no passo 3
+   - GUARDE esse texto — você vai precisar no Passo 3 desta parte
+
+postgresql://postgres:[Ra4578832@@]@db.dmjiagxxqemwuixcyhog.supabase.co:5432/postgres
+────────────────────────────────────────────────────────
+ PARTE 2 — SUBIR O PROJETO NO GITHUB
+────────────────────────────────────────────────────────
+
+1. Acesse https://github.com e crie uma conta se ainda não tiver
+2. Clique no "+" no canto superior direito → "New repository"
+   - Nome: totalsecurity (ou qualquer nome)
+   - Deixe como "Private" (privado) para segurança
+   - NÃO marque nenhuma opção extra
+   - Clique em "Create repository"
+
+3. Agora envie os arquivos do site para o GitHub.
+   Você tem duas opções:
+
+   OPÇÃO A — Pelo site do GitHub (mais fácil, sem instalar nada):
+   ─────────────────────────────────────────────────────
+   a. Na página do repositório que você acabou de criar,
+      clique em "uploading an existing file"
+   b. Arraste TODOS os arquivos da pasta do site para a tela
+      (EXCETO as pastas: .git, .venv, __pycache__)
+   c. Clique em "Commit changes"
+   ✅ Pronto, o código está no GitHub!
+
+   OPÇÃO B — Pelo terminal (se você tiver o Git instalado):
+   ─────────────────────────────────────────────────────
+   a. Abra o terminal dentro da pasta do projeto
+   b. Digite os comandos abaixo um por um:
+
+      git remote add origin https://github.com/SEU_USUARIO/totalsecurity.git
+      git branch -M main
+      git push -u origin main
+
+   (substitua SEU_USUARIO pelo seu usuário do GitHub)
+
+
+────────────────────────────────────────────────────────
+ PARTE 3 — HOSPEDAR NO VERCEL
+────────────────────────────────────────────────────────
+
+1. Acesse https://vercel.com e clique em "Sign Up"
+   - Faça login COM A MESMA CONTA DO GITHUB (muito mais fácil)
+
+2. Na tela principal do Vercel, clique em "Add New..." → "Project"
+
+3. Na lista de repositórios do GitHub, encontre o "totalsecurity"
+   e clique em "Import"
+
+4. Na tela de configuração:
+   - Framework Preset: deixe em "Other"
+   - Root Directory: deixe em branco
+   - NÃO mexa em mais nada por enquanto
+   - Clique em "Deploy"
+
+   ⚠️  O primeiro deploy vai FALHAR — isso é normal!
+       Falta configurar as variáveis de ambiente. Continue:
+
+5. Após o deploy (mesmo com erro), clique no seu projeto
+   → vá em "Settings" → "Environment Variables"
+
+6. Adicione as variáveis uma por uma clicando em "Add":
+
+   ┌─────────────────────────┬──────────────────────────────────────────┐
+   │ Nome da Variável        │ Valor                                    │
+   ├─────────────────────────┼──────────────────────────────────────────┤
+   │ WHATSAPP_TOKEN          │ seu token do WhatsApp (Meta)             │
+   │ WHATSAPP_PHONE_ID       │ seu Phone Number ID (Meta)               │
+   │ RECIPIENT_PHONE         │ 5544991561510                            │
+   │ WHATSAPP_API_VERSION    │ v17.0                                    │
+   │ DATABASE_URL            │ postgresql://postgres... (do Supabase)   │
+   └─────────────────────────┴──────────────────────────────────────────┘
+
+   Depois de adicionar todas, clique em "Save"
+
+7. Volte para a aba "Deployments"
+   → Clique nos três pontos "..." do último deploy
+   → Clique em "Redeploy"
+   → Aguarde ~30 segundos
+
+8. Quando aparecer o círculo verde "Ready" — o site está NO AR!
+   Clique em "Visit" para ver o site funcionando.
+
+   Seu site terá um endereço como:
+   https://totalsecurity.vercel.app
+
+
+────────────────────────────────────────────────────────
+ PARTE 4 — DOMÍNIO PERSONALIZADO (opcional)
+────────────────────────────────────────────────────────
+
+Se você quiser um endereço como  www.totalsecurity.com.br :
+
+1. No Vercel → seu projeto → "Settings" → "Domains"
+2. Digite seu domínio e clique em "Add"
+3. O Vercel vai mostrar os registros DNS para configurar
+4. Acesse o painel do seu provedor de domínio (RegistroBR, GoDaddy, etc.)
+   e adicione os registros DNS que o Vercel indicar
+5. Aguarde até 48h para propagar (geralmente é bem mais rápido)
+
+
+────────────────────────────────────────────────────────
+ COMO VER OS ORÇAMENTOS RECEBIDOS
+────────────────────────────────────────────────────────
+
+Todos os orçamentos ficam salvos no Supabase.
+Para visualizar:
+
+1. Acesse https://supabase.com → seu projeto
+2. Menu lateral → "Table Editor"
+3. Clique na tabela "orcamentos"
+4. Todos os pedidos aparecem ali com data e hora!
+
+
+────────────────────────────────────────────────────────
+ RESUMO RÁPIDO (para quem já sabe o básico)
+────────────────────────────────────────────────────────
+
+  1. Supabase → criar projeto → rodar schema.sql → copiar DATABASE_URL
+  2. GitHub   → criar repositório → fazer upload dos arquivos
+  3. Vercel   → importar do GitHub → adicionar variáveis de ambiente → redeploy
+  ✅ Site no ar!
+
+
+────────────────────────────────────────────────────────
+ PROBLEMAS COMUNS
+────────────────────────────────────────────────────────
+
+❌ Erro "Module not found: psycopg2"
+   → Certifique-se de que o arquivo requirements.txt está na pasta
+     e contém a linha: psycopg2-binary==2.9.9
+
+❌ Formulário envia mas não chega no WhatsApp
+   → Verifique WHATSAPP_TOKEN e WHATSAPP_PHONE_ID no Vercel
+   → O orçamento ainda será salvo no banco do Supabase
+
+❌ Erro de banco de dados no deploy
+   → Verifique se substituiu [YOUR-PASSWORD] na DATABASE_URL
+   → Verifique se rodou o schema.sql no Supabase
+
+❌ Site abre mas mostra erro 500
+   → Vá em Vercel → seu projeto → "Deployments" → clique no deploy
+     → "Functions" → veja os logs de erro
+
+
+========================================================
+  Dúvidas? Entre em contato com quem fez o site.
+========================================================

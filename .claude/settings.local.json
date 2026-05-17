@@ -1,0 +1,9 @@
+{
+  "permissions": {
+    "allow": [
+      "PowerShell(dir \"C:\\\\totalseurity\\\\sitesegurity\" -Recurse -Force 2>$null | % { $_.FullName })",
+      "PowerShell(Get-ChildItem -Path \"C:\\\\totalseurity\\\\sitesegurity\" -Force -Recurse | ForEach-Object { if \\($_.PSIsContainer\\) { $_.FullName + \" [DIR]\" } else { $_.FullName } })",
+      "Bash(git *)"
+    ]
+  }
+}

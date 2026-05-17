@@ -1,0 +1,223 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Total Security — Segurança Eletrônica</title>
+  <meta name="description" content="Total Security: soluções em segurança eletrônica. Câmeras, alarmes, cercas elétricas e controle de acesso. Solicite um orçamento pelo WhatsApp." />
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;700;800&display=swap" rel="stylesheet">
+  <script src="https://cdn.tailwindcss.com"></script>
+  <style>
+    html { scroll-behavior: smooth; }
+    :root{--emerald: #10b981}
+    /* small, focused custom styles to complement Tailwind */
+    .glass { background: linear-gradient(180deg, rgba(255,255,255,0.02), rgba(255,255,255,0.01)); }
+  </style>
+</head>
+<body class="bg-black text-white font-sans" style="font-family:Inter, system-ui, -apple-system, 'Segoe UI', Roboto, 'Helvetica Neue', Arial;">
+
+<!-- Header -->
+<header class="sticky top-0 z-50 bg-black/95 border-b border-neutral-800 backdrop-blur">
+  <div class="max-w-7xl mx-auto px-6 lg:px-8 h-20 flex items-center justify-between">
+    <a href="#" class="flex items-center gap-4" aria-label="Total Security - início">
+      <span class="inline-flex items-center justify-center w-14 h-14 rounded-2xl bg-emerald-600 text-black text-2xl font-extrabold">TS</span>
+      <span class="text-3xl font-extrabold tracking-tight text-white">Total Security</span>
+    </a>
+
+    <nav class="hidden md:flex items-center gap-8 text-base" aria-label="Menu principal">
+      <a href="#produtos" class="hover:text-emerald-400">Produtos</a>
+      <a href="#contato" class="hover:text-emerald-400">Contato</a>
+      <a href="#sobre" class="hover:text-emerald-400">Sobre</a>
+    </nav>
+
+    <div class="hidden md:flex items-center gap-4">
+      <a href="https://wa.me/5544991561510?text=Ol%C3%A1%2C%20gostaria%20de%20um%20or%C3%A7amento" target="_blank" rel="noopener" class="inline-flex items-center gap-2 rounded-full border border-emerald-600 px-4 py-2 text-base font-medium text-emerald-400 hover:bg-neutral-900 focus:outline-none focus:ring-2 focus:ring-emerald-600" aria-label="Falar no WhatsApp">
+        <!-- simple phone icon -->
+        <svg xmlns="http://www.w3.org/2000/svg" class="w-4 h-4" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="1.5"><path stroke-linecap="round" stroke-linejoin="round" d="M3 5h4l2 5-2 2 4 4 2-2 5 2v4a1 1 0 01-1 1 16 16 0 01-16-16 1 1 0 011-1z"/></svg>
+        WhatsApp
+      </a>
+
+      <!-- Mobile menu button -->
+      <button id="btnMenu" class="md:hidden inline-flex items-center justify-center w-10 h-10 rounded-lg hover:bg-neutral-900" aria-label="Abrir menu">
+        <svg xmlns="http://www.w3.org/2000/svg" class="h-6 w-6" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2">
+          <path stroke-linecap="round" stroke-linejoin="round" d="M4 6h16M4 12h16M4 18h16" />
+        </svg>
+      </button>
+    </div>
+
+    <!-- mobile button visible on small screens -->
+    <div class="md:hidden">
+      <button id="btnMenuMobile" class="inline-flex items-center justify-center w-10 h-10 rounded-lg hover:bg-neutral-900" aria-label="Abrir menu">
+        <svg xmlns="http://www.w3.org/2000/svg" class="h-6 w-6" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2">
+          <path stroke-linecap="round" stroke-linejoin="round" d="M4 6h16M4 12h16M4 18h16" />
+        </svg>
+      </button>
+    </div>
+  </div>
+
+  <div id="mobileNav" class="md:hidden hidden border-t border-neutral-800 bg-black" aria-hidden="true">
+    <nav class="max-w-7xl mx-auto px-4 py-3 flex flex-col gap-2 text-base">
+      <a href="#produtos" class="py-2">Produtos</a>
+      <a href="#contato" class="py-2">Contato</a>
+      <a href="#sobre" class="py-2">Sobre</a>
+    </nav>
+  </div>
+</header>
+
+<!-- Floating WhatsApp CTA -->
+<a href="https://wa.me/5544991561510" target="_blank" rel="noopener" class="fixed right-6 bottom-6 z-40 inline-flex items-center gap-3 rounded-full bg-emerald-600 px-4 py-3 shadow-lg hover:shadow-2xl transition" aria-label="Abrir WhatsApp">
+  <svg xmlns="http://www.w3.org/2000/svg" class="w-5 h-5 text-black" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><path stroke-linecap="round" stroke-linejoin="round" d="M21 12a9 9 0 10-2.62 6.02L22 22l-3-4.62A9 9 0 0021 12z"/></svg>
+  <span class="font-medium text-black">WhatsApp</span>
+</a>
+
+<!-- Hero -->
+<section class="relative overflow-hidden">
+  <div class="absolute inset-0 bg-gradient-to-br from-neutral-900 to-black"></div>
+  <div class="relative max-w-7xl mx-auto px-6 lg:px-8 py-20 grid md:grid-cols-2 gap-12 items-center">
+    <div>
+      <h1 class="text-5xl md:text-6xl leading-tight font-extrabold text-white max-w-2xl">Segurança eletrônica de confiança para sua <span class="text-emerald-500">casa</span> e <span class="text-emerald-500">empresa</span>.</h1>
+      <p class="mt-6 text-neutral-300 max-w-prose">A Total Security entrega soluções completas em CFTV, alarmes, cercas elétricas e controle de acesso — com instalação profissional e suporte local. Receba um orçamento rápido pelo WhatsApp.</p>
+      <div class="mt-8 flex flex-wrap gap-4">
+        <a href="#produtos" class="inline-flex items-center rounded-full bg-emerald-600 text-black px-6 py-3 font-semibold hover:bg-emerald-500">Ver produtos</a>
+        <a href="https://wa.me/5544991561510?text=Quero%20um%20or%C3%A7amento" target="_blank" rel="noopener" class="inline-flex items-center rounded-full border border-neutral-700 px-6 py-3 font-medium hover:bg-neutral-900">Falar no WhatsApp</a>
+      </div>
+    </div>
+
+    <div class="relative">
+      <div class="absolute -inset-6 bg-emerald-900/20 rounded-3xl blur-2xl"></div>
+      <img src="https://images.unsplash.com/photo-1605902711622-cfb43c44384a?auto=format&fit=crop&w=1000&q=80" alt="Câmeras de segurança" class="relative rounded-3xl shadow-2xl border border-neutral-800 w-full h-80 object-cover" loading="lazy" />
+    </div>
+  </div>
+</section>
+
+<!-- Products -->
+<section id="produtos" class="py-16">
+  <div class="max-w-7xl mx-auto px-6 lg:px-8">
+    <div class="flex items-end justify-between gap-6">
+      <div>
+        <h2 class="text-3xl font-bold">Produtos</h2>
+        <p class="text-neutral-400 mt-1">Soluções completas em CFTV, alarmes e controle de acesso.</p>
+      </div>
+      <div class="hidden sm:flex gap-3">
+        <input id="search" type="text" placeholder="Buscar por nome ou tag…" class="bg-neutral-900 border border-neutral-800 rounded-full px-4 py-2 w-80 focus:outline-none focus:ring-2 focus:ring-emerald-600" aria-label="Buscar produtos" />
+        <select id="category" class="bg-neutral-900 border border-neutral-800 rounded-full px-4 py-2">
+          <option value="">Todas</option>
+          <option value="Câmeras">Câmeras</option>
+          <option value="Gravação">Gravação</option>
+          <option value="Alarmes">Alarmes</option>
+          <option value="Cerca">Cerca</option>
+          <option value="Acesso">Acesso</option>
+          <option value="Acessórios">Acessórios</option>
+        </select>
+        <select id="sort" class="bg-neutral-900 border border-neutral-800 rounded-full px-4 py-2">
+          <option value="pop">Populares</option>
+          <option value="asc">Preço: menor → maior</option>
+          <option value="desc">Preço: maior → menor</option>
+        </select>
+      </div>
+    </div>
+
+    <div id="grid" class="mt-8 grid gap-8 sm:grid-cols-2 lg:grid-cols-3 xl:grid-cols-4"></div>
+
+    <div id="emptyState" class="hidden mt-10 rounded-2xl border border-neutral-800 p-10 text-center">
+      <p class="text-neutral-400">Nenhum produto encontrado.</p>
+    </div>
+  </div>
+</section>
+
+<!-- Contact -->
+<section id="contato" class="py-16 border-t border-neutral-800">
+  <div class="max-w-7xl mx-auto px-6 lg:px-8 text-center">
+    <h2 class="text-3xl font-bold">Entre em contato</h2>
+    <p class="mt-3 text-neutral-400">Solicite um orçamento ou tire suas dúvidas via WhatsApp.</p>
+    <div class="mt-8">
+      <a href="https://wa.me/5544991561510?text=Ol%C3%A1%2C%20gostaria%20de%20um%20or%C3%A7amento" target="_blank" rel="noopener" class="inline-flex items-center gap-3 rounded-full bg-emerald-600 px-6 py-3 font-semibold text-black">Abrir WhatsApp</a>
+    </div>
+  </div>
+</section>
+
+<!-- About -->
+<section id="sobre" class="py-16">
+  <div class="max-w-7xl mx-auto px-6 lg:px-8 grid md:grid-cols-2 gap-12 items-center">
+    <div>
+      <h2 class="text-3xl font-bold">Sobre a Total Security</h2>
+      <p class="mt-4 text-neutral-400">Somos especialistas em segurança eletrônica, com anos de experiência instalando câmeras, alarmes e sistemas de controle de acesso. Nosso objetivo é proteger você, sua família e seu patrimônio.</p>
+    </div>
+    <img src="https://images.unsplash.com/photo-1598300050868-9c1264f23a7d?auto=format&fit=crop&w=1000&q=80" alt="Equipe Total Security" class="rounded-3xl shadow-lg border border-neutral-800 w-full h-64 object-cover" loading="lazy"/>
+  </div>
+</section>
+
+<footer class="bg-black border-t border-neutral-800 py-10 mt-16 text-center text-neutral-500 text-sm">
+  <div class="max-w-7xl mx-auto px-6 lg:px-8">© 2025 Total Security. Todos os direitos reservados.</div>
+</footer>
+
+<!-- JS: products + mobile menu -->
+<script>
+  // Mobile menu toggle
+  const btnMenu = document.getElementById('btnMenu') || document.getElementById('btnMenuMobile');
+  const mobileNav = document.getElementById('mobileNav');
+  if(btnMenu){
+    btnMenu.addEventListener('click',()=> mobileNav.classList.toggle('hidden'));
+  }
+
+  // Produtos (demo data)
+  const products = [
+    { name: 'Câmera IP 4K', price: 1200, category: 'Câmeras', image: 'https://images.unsplash.com/photo-1581093588401-6a2b7d207f49?auto=format&fit=crop&w=800&q=80', tags: ['ip','4k'] },
+    { name: 'DVR 8 canais', price: 850, category: 'Gravação', image: 'https://images.unsplash.com/photo-1611175694116-3f0e43c9817b?auto=format&fit=crop&w=800&q=80', tags: ['dvr','8 canais'] },
+    { name: 'Alarme Residencial', price: 450, category: 'Alarmes', image: 'https://images.unsplash.com/photo-1600267166790-fd5c3f9ffbf7?auto=format&fit=crop&w=800&q=80', tags: ['alarme','residencial'] },
+    { name: 'Cerca Elétrica 20m', price: 300, category: 'Cerca', image: 'https://images.unsplash.com/photo-1618889174733-2c33c7f99945?auto=format&fit=crop&w=800&q=80', tags: ['cerca','elétrica'] },
+    { name: 'Controle de Acesso', price: 950, category: 'Acesso', image: 'https://images.unsplash.com/photo-1612831455542-0d69f4ed5b8e?auto=format&fit=crop&w=800&q=80', tags: ['acesso','controle'] },
+    { name: 'Cabo Coaxial 100m', price: 120, category: 'Acessórios', image: 'https://images.unsplash.com/photo-1580584126364-5b5efc37d0a5?auto=format&fit=crop&w=800&q=80', tags: ['cabo','coaxial'] }
+  ];
+
+  const grid = document.getElementById('grid');
+  const emptyState = document.getElementById('emptyState');
+  const searchInput = document.getElementById('search');
+  const categorySelect = document.getElementById('category');
+  const sortSelect = document.getElementById('sort');
+
+  function formatPrice(v){ return v.toLocaleString('pt-BR',{minimumFractionDigits:2}); }
+
+  function renderProducts(){
+    const search = (searchInput?.value || '').toLowerCase();
+    const category = categorySelect?.value || '';
+    let filtered = products.filter(p=> p.name.toLowerCase().includes(search) || p.tags.some(t=> t.includes(search)));
+    if(category) filtered = filtered.filter(p=> p.category === category);
+    if(sortSelect){
+      if(sortSelect.value === 'asc') filtered.sort((a,b)=>a.price-b.price);
+      else if(sortSelect.value === 'desc') filtered.sort((a,b)=>b.price-a.price);
+    }
+
+    grid.innerHTML = '';
+    if(filtered.length===0){ emptyState.classList.remove('hidden'); }
+    else{
+      emptyState.classList.add('hidden');
+      filtered.forEach(p=>{
+        const card = document.createElement('article');
+        card.className = 'bg-neutral-900 border border-neutral-800 rounded-2xl overflow-hidden shadow hover:shadow-2xl transition transform hover:-translate-y-1';
+        card.innerHTML = `
+          <img src="${p.image}" alt="${p.name}" class="w-full h-44 object-cover" loading="lazy"/>
+          <div class="p-4">
+            <h3 class="font-semibold text-white">${p.name}</h3>
+            <p class="text-neutral-400 text-sm mt-1">${p.category}</p>
+            <div class="mt-4 flex items-center justify-between">
+              <div class="text-emerald-400 font-bold">R$ ${formatPrice(p.price)}</div>
+              <a href="https://wa.me/5544991561510?text=Quero%20um%20or%C3%A7amento%20do%20${encodeURIComponent(p.name)}" target="_blank" class="inline-flex items-center rounded-full bg-emerald-600 text-black px-3 py-1 text-sm font-semibold">Orçar</a>
+            </div>
+          </div>
+        `;
+        grid.appendChild(card);
+      });
+    }
+  }
+
+  searchInput?.addEventListener('input', renderProducts);
+  categorySelect?.addEventListener('change', renderProducts);
+  sortSelect?.addEventListener('change', renderProducts);
+  renderProducts();
+</script>
+
+</body>
+</html>
